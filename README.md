@@ -1,62 +1,54 @@
-# 🌲 BC Air Quality PM2.5 Interactive Dashboard
+# 🌲 British Columbia PM2.5 Air Quality Dashboard
 
-An interactive web application built with Python to visualize and analyze fine particulate matter ($PM_{2.5}$) levels across British Columbia. This tool pulls live data from Environmental Reporting BC to provide insights into air quality trends, management levels, and station-specific metrics.
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B)
+![Data](https://img.shields.io/badge/Data-BC_Gov_Catalogue-success)
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![Streamlit](https://img.shields.io/badge/streamlit-v1.0+-red.svg)
-![Plotly](https://img.shields.io/badge/plotly-v5.0+-orange.svg)
+An interactive web dashboard built with **Streamlit** and **Plotly** to visualize the Canadian Ambient Air Quality Standards (CAAQS) metrics for fine particulate matter (PM2.5) across British Columbia.
 
-## 🚀 Features
-- **Live Data Integration:** Fetches the latest PM2.5 station summary directly from the British Columbia Data Catalogue.
-- **Interactive Mapping:** Geographic visualization of air quality stations using Plotly Mapbox, with markers scaled and colored by pollution levels.
-- **Trend Analysis:** Time-series charts to track air quality changes by Air Zone over the last decade.
-- **Dynamic Filtering:** 
-    - Filter by **Metric Type** (24h vs. Annual).
-    - Filter by **Air Zone** (e.g., Lower Fraser Valley, Southern Interior, etc.).
-    - Filter by **Year Range** using a slider.
-- **Management Level Stats:** Visual breakdown of stations meeting or exceeding air quality objectives.
+## ✨ Features
 
-## 🛠️ Installation
+- **Live Data Ingestion:** Fetches and caches data directly from the BC Government Data Catalogue.
+- **Dynamic KPI Metrics:** Real-time summary cards showing total active stations, standard achievement percentages, and average PM2.5 values based on your filters.
+- **Interactive Mapbox:** A geographical map of BC. Station markers are sized dynamically by PM2.5 concentration and color-coded by their achievement status (Achieved / Not Achieved).
+- **Historical Trend Analysis:** A time-series line chart that compares PM2.5 trends across different airzones over multiple years.
+- **Deep Filtering:** Sidebar controls allow you to instantly slice the data by Year, Metric Type (24-Hour vs Annual), and specific Airzones.
+- **Raw Data Explorer:** An expandable section to view, sort, and analyze the raw tabular data behind the visualizations.
 
-1. **Clone the repository** (or download the files):
-   ```bash
-   git clone https://github.com/your-username/bc-air-quality-dashboard.git
-   cd bc-air-quality-dashboard
-   ```
+## 💾 Data Source
+The data used in this dashboard is provided by the Government of British Columbia under the Open Government License - British Columbia. 
+* **Dataset:** [CAAQS metrics for fine particulate matter (PM2.5)](https://catalogue.data.gov.bc.ca/dataset/699be99e-a9ba-403e-b0fe-3d13f84f45ab/resource/bfa3fdd8-2950-4d3a-b190-52fb39a5ffd4/download/pm25_stations_summary.csv)
 
-2. **Install the required dependencies:**
-   Make sure you have Python installed, then run:
-   ```bash
-   pip install streamlit pandas plotly
-   ```
+## 🚀 Getting Started
 
-## 💻 Usage
+### Prerequisites
+Make sure you have Python 3.7 or higher installed on your machine. 
 
-To launch the dashboard, run the following command in your terminal:
+### Installation
+1. Clone this repository or download the source code to your local machine.
+2. Open your terminal or command prompt and navigate to the project directory.
+3. Install the required Python dependencies:
 
 ```bash
-streamlit run app.py
+pip install streamlit pandas plotly
 ```
 
-The application will automatically open in your default web browser (usually at `http://localhost:8501`).
+*(Optional but recommended: Create a virtual environment before installing dependencies)*
 
-## 📊 Data Source
-The data used in this dashboard is provided by the **Government of British Columbia** via the [Open Government Portal](https://open.canada.ca/data/en/dataset/699be99e-a9ba-403e-b0fe-3d13f84f45ab). 
+### Running the Application
+Once the requirements are installed, you can launch the dashboard by running:
 
-- **Dataset:** [Fine Particulate Matter CAAQS Station Results](https://catalogue.data.gov.bc.ca/dataset/699be99e-a9ba-403e-b0fe-3d13f84f45ab/resource/bfa3fdd8-2950-4d3a-b190-52fb39a5ffd4/download/pm25_stations_summary.csv)
-- **License:** [Open Government License - British Columbia](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-license-bc)
+```bash
+streamlit run bc_air_quality_dashboard.py
+```
 
-## 🛠️ Python Libraries Used
-- **Pandas**: Data manipulation and cleaning.
-- **Streamlit**: Framework for building the web interface.
-- **Plotly Express**: Interactive charts and geographic maps.
+A new tab will automatically open in your default web browser (usually at `http://localhost:8501`) displaying the interactive dashboard.
+
+## 🛠️ Built With
+* [Streamlit](https://streamlit.io/) - The web framework used for building the interactive UI.
+* [Plotly](https://plotly.com/python/) - Used for the interactive mapping and charting.
+* [Pandas](https://pandas.pydata.org/) - Used for data manipulation, cleaning, and aggregation.
 
 ## 📝 License
-This project is open-source and available under the Apache 2.0 License.
-
----
-
-### Author
-Developed by [Frankie Chan](https://github.com/chanfrankie) 
-
-
+This project is open-source and free to use. Please ensure you comply with the [Open Government License - British Columbia](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-license-bc) when using the underlying dataset.
+```
