@@ -53,4 +53,3 @@ A new tab will automatically open in your default web browser (usually at `http:
 
 ## 📝 License
 This project is open-source and free to use. Please ensure you comply with the [Open Government License - British Columbia](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-license-bc) when using the underlying dataset.
-```
