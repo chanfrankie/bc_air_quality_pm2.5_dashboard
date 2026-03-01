@@ -4,6 +4,8 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B)
 ![Data](https://img.shields.io/badge/Data-BC_Gov_Catalogue-success)
 
+![Dashboard Screenshot](bc_air_quality_dashboard.png)
+
 An interactive web dashboard built with **Streamlit** and **Plotly** to visualize the Canadian Ambient Air Quality Standards (CAAQS) metrics for fine particulate matter (PM2.5) across British Columbia.
 
 ## ✨ Features
