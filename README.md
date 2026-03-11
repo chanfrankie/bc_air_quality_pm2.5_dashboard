@@ -10,7 +10,7 @@ An interactive web dashboard built with **Streamlit** and **Plotly** to visualiz
 
 ## ✨ Features
 
-- **Live Data Ingestion:** Fetches and caches data directly from the BC Government Data Catalogue.
+- **Live Data Ingestion:** Fetches and updates data directly from the BC Government Data Catalogue.
 - **Dynamic KPI Metrics:** Real-time summary cards showing total active stations, standard achievement percentages, and average PM2.5 values based on your filters.
 - **Interactive Mapbox:** A geographical map of BC. Station markers are sized dynamically by PM2.5 concentration and color-coded by their achievement status (Achieved / Not Achieved).
 - **Historical Trend Analysis:** A time-series line chart that compares PM2.5 trends across different airzones over multiple years.
